@@ -1,7 +1,7 @@
 package dev.drafting.event.manager.service;
 
 import dev.drafting.event.manager.model.MessageModel;
-import dev.drafting.event.manager.repository.MessageRepository;
+import dev.drafting.event.manager.repository.dynamo.MessageRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;

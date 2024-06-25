@@ -19,8 +19,8 @@ services:
       AWS_SECRET_ACCESS_KEY: 'local'
     working_dir: /home/aws
     volumes:
-      - "./migrations.sh:/home/aws/migrations.sh"
-    entrypoint: [ "sh", "/home/aws/migrations.sh" ]
+      - "./dynamodb-migrations.sh:/home/aws/dynamodb-migrations.sh"
+    entrypoint: [ "sh", "/home/aws/dynamodb-migrations.sh" ]
 
   zookeeper:
     image: confluentinc/cp-zookeeper:latest

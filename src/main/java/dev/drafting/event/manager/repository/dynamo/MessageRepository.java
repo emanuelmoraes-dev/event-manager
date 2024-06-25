@@ -1,4 +1,4 @@
-package dev.drafting.event.manager.repository;
+package dev.drafting.event.manager.repository.dynamo;
 
 import dev.drafting.event.manager.model.MessageModel;
 import org.socialsignin.spring.data.dynamodb.repository.DynamoDBCrudRepository;
