@@ -28,16 +28,15 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public void send(String content) {
+        final MessageModel model = new MessageModel();
+        model.setContent(content);
+        messageRepository.save(model);
         kafka.send(kafkaTopic, content);
     }
 
     @Override
     public void process(String content) {
         LOG.info("message: {}", content);
-
-        final MessageModel model = new MessageModel();
-        model.setContent(content);
-        messageRepository.save(model);
     }
 
     @Override
